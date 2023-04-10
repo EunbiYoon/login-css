@@ -6,7 +6,8 @@ h1{
     background-color: bisque;
 }
 
-h2{
-    color:blue;
-    text-align: center;
+footer{
+    color:green;
+    background-color:aquamarine !important;
+    text-align:center;
 }
