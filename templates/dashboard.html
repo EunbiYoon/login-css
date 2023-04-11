@@ -1,18 +1,22 @@
-{% extends 'index.html' %}
-{% block title %}Dashboard{% endblock %}
-{% block name %}BOM Comparsion Dashboard{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- stylesheet -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/index-style.css' %}">
 
-{% block sidebar %}
-  <h1>temp</h1>
-  <h1>temp</h1>
-  <h1>temp</h1>
-  <h1>temp</h1>
-  <h1>temp</h1>
-  <h1>temp</h1>
-  <h1>temp</h1>
-  <h1>temp</h1>
-{% endblock%}
+  <!-- javascript -->
+  {% load static %}
+  <script src="{% static 'js/script.js' %}" type="text/javascript"></script>  
 
-{% block content %}
-  <h1>BOM Cost Comparison</h1>
-{% endblock %}
+</head>
+<body>
+  <div class="container my-4">
+    <h1 class="display-4">Current Time Is: <span id="time"></span></h1>
+  </div>
+</body>
+</html>

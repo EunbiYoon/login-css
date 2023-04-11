@@ -4,11 +4,13 @@
 
 {% block content %}
     <div class="login">
-        <h1>User Login</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{form.as_p}}
+        <h1>Access Check</h1>
 
+        <form method="POST">
+            <div class="login-banner">
+                {% csrf_token %}
+                {{form.as_p}}
+            </div>
             <button>Login</button>
         </form>
     </div>
