@@ -5,36 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Home{% endblock %}</title>
+
+    <!-- stylesheet -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    
+    <!-- font -->
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
 </head>
 <body>
     <div class="user-info">
-        <h1 class="user-name">Welcome Data Center, {{user.username}}</h1>
+        <div class="user-name">
+            <h1>Welcome Data Center, {{user.username}}</h1>
+        </div>
         <div class="user-banner">
-            <div class="sidebar">
-                <div class="sidebar-wrapper">
-                    {% if user.is_authenticated %}
-                        <a href="{% url 'logout_url' %}">Logout</a>
-                    {% else %}
-                        <div class="button">
-                            <a href="{% url 'login_url' %}">Login</a>
-                        </div>
-                        <div class="button">
-                            <a href="{% url 'register_url' %}">Register</a>
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
+            {% if user.is_authenticated %}
+                <button href="{% url 'logout_url' %}">Logout</button>
+            {% else %}
+                <button href="{% url 'login_url' %}">Login</button>
+                <button href="{% url 'register_url' %}">Register</button>
+            {% endif %}
         </div>
     </div>
 
     {% block content %}
-        <h2>Choose your menu</h2>
+        <div class="box-container">
+            <div class="box-item1"></div>
+            <div class="box-item2"></div>
+            <div class="box-item3"></div>
+            <div class="box-item4"></div>
+        </div>
     {% endblock%}
 
     <footer class="footer">
-        <h2>Eunbi Yoon</h2>
+        <h5>Eunbi Yoon</h5>
     </footer>
     
 </body>

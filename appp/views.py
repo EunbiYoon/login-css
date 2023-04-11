@@ -6,6 +6,9 @@ from django.contrib.auth.decorators import login_required
 def indexView(request):
     return render(request,'index.html')
 
+def dashboardView(request):
+    return render(request, 'dashboard.html')
+
 def loginView(request):
     return render(request, 'registration/login.html')
 
