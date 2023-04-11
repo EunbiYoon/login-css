@@ -9,7 +9,9 @@
         <form method="POST">
             {% csrf_token %}
             {{form.as_p}}
-            <button>Register</button>
+            <div class="button-box">
+                <button>Register</button>
+            </div>
         </form>
     </div>
 {% endblock %}

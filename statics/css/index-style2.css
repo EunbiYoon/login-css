@@ -180,19 +180,31 @@ footer h5{
 .login button:hover{
     color:#146578;
     cursor: pointer;
-    font-weight:600
+    font-weight:600;
 }
 
 /* register.html*/
 .register{
-    padding:30px 7px;
+    padding:30px 50px 20px 50px;
     background-color: #D0DAEE;
     font-family: 'Orbitron';
+    border-radius: 10px;
 }
-
+.register label{
+    color:rgb(97, 0, 253);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
 .register input{
     font-size: 1.5rem;
     width:600px;
+}
+
+.register form{
+    color:rgba(0, 0, 0, 0.557)
+}
+.register .button-box{
+    text-align: center;
 }
 
 .register button{
@@ -200,6 +212,16 @@ footer h5{
     color:black;
     align-items: right;
     font-size: 1.2rem;
+    font-family: 'Orbitron';
+    margin-top:20px;
+    padding:5px 10px;
+}
+
+.register button:hover{
+    color:#146578;
+    cursor: pointer;
+    font-weight:600;
+    background-color:antiquewhite;
 }
 
 .clock {
