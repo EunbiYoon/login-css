@@ -19,7 +19,31 @@ body{
     grid-column: 3;
 }
 
+/* basic templates - sidebar */
+.sidebar {
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 200px;
+    left: 40px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
 
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #2196F3;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #064579;
+}
+
+/* basic templates - container */
 .main .cotainer .user-name .typing-demo {
     width: 100%;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
@@ -68,11 +92,6 @@ body{
 }
 
 
-h2{
-    display: flex;
-    color:blue
-}
-
 footer{
     position:fixed;
     bottom:0;
@@ -83,7 +102,7 @@ footer{
 }
 
 footer h5{
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     color:blue;
     font-family: 'Orbitron';
@@ -95,18 +114,22 @@ footer h5{
     gap: 10px;
     grid-template-columns: repeat(2, 300px);
     grid-template-rows: repeat(2,300px);
-    margin: 80px auto;
-    /* display: flex;
-    align-items: center; */
+    margin: 140px auto;
     justify-content: center;
-    text-align: center;
-
+    font-family: 'Orbitron';
 }
+
+.box-container h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .box-container .box-item1{
     grid-column: 1;
     grid-row: 1;
-    background-color: green;
+    background-color:darkgreen;
     height: 300px;
 }
 
@@ -126,7 +149,7 @@ footer h5{
 .box-container .box-item4{
     grid-column: 2;
     grid-row: 2;
-    background-color: blueviolet;
+    background-color:rgb(97, 0, 253);
     height: 300px;
 
 }
@@ -153,3 +176,5 @@ footer h5{
     background-color: aquamarine;
     color:white;
 }
+
+

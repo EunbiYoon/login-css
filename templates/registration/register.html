@@ -1,10 +1,15 @@
-{% extends '../index.html' %}
+{% extends 'index.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block name %}Please Sign Up In Here{% endblock %}
 
 {% block content %}
     <h1>Create New Account</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button>Register</button>
-    </form>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    <div class="register">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button>Register</button>
+        </form>
+    </div>
 {% endblock %}
