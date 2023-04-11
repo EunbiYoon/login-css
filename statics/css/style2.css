@@ -1,30 +1,63 @@
-/* index.html */
+/* basic templates */
 body{
-    color:palevioletred;
+    color:rgb(255, 46, 116);
 }
 
-.user-info{
+.main{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    grid-template-rows: 60px;
-    margin:30px 300px 30px 20px;
-    align-items: center;
 }
 
-.user-name{
-    grid-column: 1 / 4;
-    grid-row: 1;
-    display: flex;
-    justify-content: left;
+.main .sidebar{
+    grid-column: 1;
+}
+.main .cotainer{
+    grid-column: 2;
+}
+.main .navigator{
+    grid-column: 3;
+}
+
+
+.main .cotainer .user-name .typing-demo {
+    width: 100%;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
     font-family: 'Orbitron';
+    font-size: 3em;
+}
+
+
+.main .cotainer .user-name .typing-demo span{
+    color:green
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+    
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes blink{
+    50% {
+        border-color: transparent
+    }
 }
 
 .user-banner{
-    grid-column: 8 / 9;
-    grid-row: 1;
+    grid-column: 4 / 5;
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    margin-left:300px;
 }
 
 .user-banner button{
@@ -33,6 +66,7 @@ body{
     margin: 0 10px;
     width:100px
 }
+
 
 h2{
     display: flex;
@@ -44,7 +78,7 @@ footer{
     bottom:0;
     left:0;
     width:100%;
-    height: 90px;
+    height: 70px;
     background-color: #D0DAEE;
 }
 
@@ -58,13 +92,15 @@ footer h5{
 /* index.html */
 .box-container{
     display: grid;
-    grid-template-columns: repeat(2, 300px);
     gap: 10px;
+    grid-template-columns: repeat(2, 300px);
     grid-template-rows: repeat(2,300px);
     margin: 80px auto;
     /* display: flex;
     align-items: center; */
     justify-content: center;
+    text-align: center;
+
 }
 
 .box-container .box-item1{
@@ -93,4 +129,27 @@ footer h5{
     background-color: blueviolet;
     height: 300px;
 
+}
+
+
+/* login.html */
+.login{
+    text-align: center;
+    width: 100%;
+    margin: 150px auto;
+    border-radius: 10px;
+    background-color: #D0DAEE;
+    font-family: 'Orbitron';
+}
+
+.login form{
+    margin:10px;
+    color:blue;
+    font-size:1.2rem;
+}
+
+
+.login button{
+    background-color: aquamarine;
+    color:white;
 }
