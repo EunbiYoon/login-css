@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+
+# index templates
 def indexView(request):
     return render(request,'index.html')
 
@@ -23,9 +24,12 @@ def registerView(request):
     # postX -> form=''
     else:
         form=UserCreationForm()
-    
     return render(request,'registration/register.html',{'form':form})
-
 
 def logoutView(request):
     return render(request, 'registration/logout.html')
+
+
+# dashboard templates
+def bomView(request):
+    return render(request,'dash_bom.html')

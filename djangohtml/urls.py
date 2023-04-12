@@ -25,4 +25,5 @@ urlpatterns = [
     path('register/', views.registerView, name="register_url"),
     path('login/',LoginView.as_view(next_page="dashboard"), name="login_url"),
     path('logout/',LogoutView.as_view(next_page="home"), name="logout_url"),
+    path('dashboard/bomcomparison',views.bomView, name="dash_bom_url"),
 ]

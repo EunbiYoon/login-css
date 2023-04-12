@@ -64,7 +64,20 @@ body{
     background-color: antiquewhite;
     font-family: 'Orbitron';
     margin: 0 10px;
-    width:100px
+    width:100px;
+    font-size:1rem;
+    margin-top:10px;
+}
+
+.user-banner button:hover{
+    background-color: aqua;
+    color:white;
+    font-weight: 800;
+    cursor:pointer;
+}
+
+.user-banner button a{
+    text-decoration: none;
 }
 
 
@@ -95,13 +108,21 @@ footer h5{
     font-family: 'Orbitron';
     text-align: center;
 }
-
+.box-container a{
+    text-decoration: none;
+}
+.box-container a:hover{
+    background-color:rgb(255, 211, 226);
+    color:black;
+    font-weight: 800;
+}
 
 .box-container .box-item1{
     grid-column: 1;
     grid-row: 1;
     background-color:darkgreen;
     height: 300px;
+    color:white
 }
 
 .box-container .box-item2{
@@ -122,6 +143,7 @@ footer h5{
     grid-row: 2;
     background-color:rgb(97, 0, 253);
     height: 300px;
+    color:white;
 }
 
 .loaders-item {  

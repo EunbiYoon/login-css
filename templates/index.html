@@ -31,28 +31,18 @@
 
             {% block content %}
                 <div class="box-container">
-                    <div class="box-item1">
+                    <a class="box-item1" href="{% url 'dash_bom_url' %}">
                         <h2>BOM Comparison</h2>
-                    </div>
-                    <div class="box-item2">
+                    </a>
+                    <a class="box-item2" href="{% url 'register_url' %}">
                         <h2>Cost Review</h2>
-                    </div>
-                    <div class="box-item3">
+                    </a>
+                    <a class="box-item3" href="{% url 'register_url' %}">
                         <h2>Coming Soon!</h2>
-                    </div>
-                    <div class="box-item4">
+                    </a>
+                    <a class="box-item4" href="{% url 'register_url' %}">
                         <h2>Coming Soon!</h2>
-                        <div class="loaders-item">
-                            <div class="equalizer">
-                              <div class="equalizer-circle"></div>
-                              <div class="equalizer-level-1"></div>
-                              <div class="equalizer-level-2"></div>
-                              <div class="equalizer-level-3"></div>
-                              <div class="equalizer-level-4"></div>
-                              <div class="equalizer-level-5"></div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             {% endblock%}
 
