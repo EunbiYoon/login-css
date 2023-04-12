@@ -158,12 +158,32 @@ footer h5{
     font-family: 'Orbitron';
 }
 
+.login h1{
+    background: linear-gradient(#10abff, #1beabd 5%, #10abff 40%);
+    background-clip: text;
+    background-color: #da1b60;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: TransitioningBackground 2s linear infinite;
+    background-size: 100% 300%;
+}
+@keyframes TransitioningBackground {
+    0% {
+        background-position: 100% 200%;
+    }
+    100% {
+        background-position: 100% -100%;
+    }
+}
+
 .login form{
     display: grid;
     grid-template-columns: 5fr 1fr;
     gap: 10px;
-    background-color: antiquewhite;
-    border: #17D4FE 1px solid;
+    background-color:azure;
+    border: #17D4FE 5px solid;
     font-weight: 600;
 }
 
@@ -189,12 +209,15 @@ footer h5{
     margin:auto;
     width: 100%;
     height: 100%;
-    border: #17D4FE 1px solid;
+    border-top: transparent;
+    border-bottom: transparent;
+    border-right: transparent;
+    border-left: #17D4FE 5px solid;
     font-family: 'Orbitron';
 }
 
 .login button:hover{
-    color:#146578;
+    color:rgb(171, 171, 171);
     cursor: pointer;
     font-weight:600;
 }
