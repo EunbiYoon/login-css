@@ -1,11 +1,23 @@
-let a;
-let date;
-let time;
-setInterval(() => {
-    
-a = new Date();
-date = a.toLocaleDateString(); 
-time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
-document.getElementById('time').innerHTML = time + ' ' + date;
-}, 1000);
 
+window.addEventListener('DOMContentLoaded', event => {
+    const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        }
+    });
+});

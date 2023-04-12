@@ -7,8 +7,6 @@ from django.contrib.auth.decorators import login_required
 def indexView(request):
     return render(request,'index.html')
 
-def dashboardView(request):
-    return render(request, 'dashboard.html')
 
 def loginView(request):
     return render(request, 'registration/login.html')
@@ -31,5 +29,6 @@ def logoutView(request):
 
 
 # dashboard templates
+@login_required(login_url='login_url')
 def bomView(request):
     return render(request,'dash_bom.html')
